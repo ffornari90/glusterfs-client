@@ -1,7 +1,7 @@
-Role Name
+Ansible GlusterFS Client
 =========
 
-A brief description of the role goes here.
+Ansible Role for GlusterFS client instatiation.
 
 Requirements
 ------------
