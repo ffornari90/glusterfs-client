@@ -1,0 +1,13 @@
+- name: Create Gluster volume mountpoint
+  become: yes
+  file:
+    path: /mnt/glusterfs
+    state: directory
+- name: Mount Gluster volume
+  become: yes
+  ansible.posix.mount:
+    src: "{{ server_host }}:/gluster-volume"
+    path: /mnt/glusterfs
+    opts: direct-io-mode=enable
+    state: mounted
+    fstype: glusterfs
