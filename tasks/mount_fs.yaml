@@ -3,6 +3,7 @@
   file:
     path: /mnt/glusterfs
     state: directory
+
 - name: Mount Gluster volume
   become: yes
   ansible.posix.mount:
